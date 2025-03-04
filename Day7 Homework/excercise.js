@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Register Page</title>
-    </head>
-    <body>
-        // Declare scores for 3 subjects
-        <script>
+console.log("-----Excercise Section-----") ;
 // Declare scores for 3 subjects
-//bai cua em Hong
 //Ex1
 
 let mathScore = 8;
@@ -49,7 +41,7 @@ let fahrenheit = (celsius * 1.8) + 32;
 
 // Print result
 
-console.log(celsius + "°C = " + fahrenheit + "°F");
+console.log(celsius + " °C = " + fahrenheit + " °F");
 
 //Ex4
 
@@ -85,8 +77,3 @@ let isEven = number / 2 == 0 ;
 // Print result
 
 console.log("Number " + number + " is " + (isEven ? "even" : "odd"));
-        </script>
-        
-
-    </body>
-    </html>
