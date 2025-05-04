@@ -1,0 +1,136 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 0;
+    border: 1px solid black;
+    background-color: beige;
+}
+
+.header__avatar {
+    width: fit-content;
+    margin: 1%;
+}
+
+.header__avatar img {
+    width: 200px;
+    border-radius: 25px;
+    margin-left: 10%;
+}
+
+.header__title {
+    width: fit-content;
+}
+
+.header__title h1 {
+    font-family: Helvetica;
+}
+
+.header__title p {
+    font-family: Helvetica;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    align-items: stretch;
+    margin: 0%;
+}
+
+.column__title {
+    font-size: large;
+    font-weight: bold;
+    text-indent: 2% !important;
+}
+
+.column__points::before {
+    content: '⁃';
+    margin-right: 10px;
+}
+
+.column__text::before {
+    content: '•';
+    margin-right: 4px;
+}
+
+.column__text {
+    text-indent: 3% !important;
+}
+
+.column--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 30%;
+    height: 500px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    gap: 25px;
+    border-right: 1px solid black;
+    background-color: aliceblue;
+}
+
+.column--left .column__info {
+    width: 100%;
+    height: 45%;
+    margin-top: 5%;
+    text-indent: 5%;
+    border-bottom: 1px solid black;
+}
+
+.column--left p {
+    margin-left: 3% !important; 
+}
+
+.column--left .column__education {
+    width: 100%;
+    margin-top: 0;
+    text-indent: 5%;
+}
+
+.column--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 70%;
+    height: 500px;
+    margin-bottom: 0px;
+    background-color: rgb(244, 191, 191);
+}
+
+.column--right .column__work-experiences {
+    width: 100%;
+    text-indent: 4%;
+}
+
+.column--right p {
+    margin-left: 2%;
+}
+
+.column--right p:first-of-type {
+    margin-top: 18%;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    margin-top: 0;
+    border: 1px solid black;
+    background-color: beige;
+}
