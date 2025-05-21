@@ -1,0 +1,56 @@
+{
+  "sumCallCount": 3,
+  "history": [
+    {
+      "endpoint": "/sum-count",
+      "input": {},
+      "output": {
+        "totalCalls": 0
+      }
+    },
+    {
+      "endpoint": "/sum-count",
+      "input": {},
+      "output": {
+        "totalCalls": 0
+      }
+    },
+    {
+      "endpoint": "/sum",
+      "input": {
+        "num1": 100,
+        "num2": 100
+      },
+      "output": {
+        "sum": 200
+      }
+    },
+    {
+      "endpoint": "/sum-count",
+      "input": {},
+      "output": {
+        "totalCalls": 1
+      }
+    },
+    {
+      "endpoint": "/sum",
+      "input": {
+        "num1": 100,
+        "num2": 100
+      },
+      "output": {
+        "sum": 200
+      }
+    },
+    {
+      "endpoint": "/sum",
+      "input": {
+        "num1": 300,
+        "num2": 100
+      },
+      "output": {
+        "sum": 400
+      }
+    }
+  ]
+}
