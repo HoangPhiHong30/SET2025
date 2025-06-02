@@ -8,8 +8,8 @@ jobs:
   chessgame1:
     runs-on: self-hosted
     steps: 
-      - name: checkout-main
-        uses: actions/checkout@v4
+      - name: pull-main
+        run: git pull origin main
       - name: report
         run: echo "Hello from the other side"
 #checkout@v4 already check for latest commits and pull them
