@@ -1,0 +1,77 @@
+@startuml play
+start
+:menuDisplayOptions;
+:playerClickPlay;
+:displayBoard;
+:playerStartPlay;
+stop
+@enduml
+
+@startuml leave 
+start
+:userPressEsc;
+:menuDisplayOptions;
+:userClickLeave;
+:userLeave;
+end
+@enduml
+
+@startuml move
+start
+:playerPickAvailablePiece;
+:checkAvailableSlots;
+:displayAvailableSlots;
+repeat :playerPickSlot;
+repeat while (checkIfSlotValid) ->no
+->yes;
+:movePieceToSlot;
+if(opponentPieceOnSlot) then (yes)
+    :Capture;
+else(no)
+    :noCapture;
+endif
+:checkForCheck;
+if (check) then (yes)
+    if (checkMate) then (yes)
+        :win;
+        end
+    else (no)
+        :noCheckMate;
+    endif
+else (no)
+    :noCheck;
+endif
+:switchTurn;
+stop
+@enduml
+
+@startuml resign
+start
+:playerPickResign;
+:displayResignQuestion;
+if (playerPickYes) then (yes)
+    :updatePlayerStatusResign;
+    end
+else (no)
+    :continue;
+    stop
+endif
+@enduml
+
+@startuml draw
+start
+:playerPickDraw;
+:displayDrawQuestion;
+if (playerPickYes) then (yes)
+    if (opponentPickYes) then (yes)
+        :updatePlayerStatusDraw;
+        end
+    else (no)
+        :continue;
+    endif
+else (no)
+    :continue;
+endif
+stop
+@enduml
+

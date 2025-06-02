@@ -1,0 +1,27 @@
+@startuml usecase
+left to right direction
+package User {
+    actor Player as player
+    actor Spectator as spectator
+}
+rectangle Chess {
+    usecase "Play" as play
+    usecase "Move" as move
+    usecase "Capture" as capture
+    usecase "Resign" as resign
+    usecase "Offer Draw" as draw
+    usecase "Leave" as leave
+    usecase "Spectate" as spectate
+}
+move .> play : include
+capture .> move : include 
+spectator --> spectate
+spectator --> leave
+player --> play
+player --> move
+player --> capture
+player --> resign
+player --> draw
+player --> leave
+@enduml
+
