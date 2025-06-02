@@ -1,0 +1,12 @@
+name: Test
+
+on: 
+  push: 
+    branches: [main] 
+#All the above is to tell which branch to listen for push
+jobs: 
+  runs-on: self-hosted
+  steps: 
+    - name: checkout-main
+      uses: actions/checkout@v4
+#checkout@v4 already check for latest commits and pull them
