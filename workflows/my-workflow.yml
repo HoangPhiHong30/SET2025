@@ -9,4 +9,6 @@ jobs:
   steps: 
     - name: checkout-main
       uses: actions/checkout@v4
+    - name: report
+      uses: echo "Hello from the other side"
 #checkout@v4 already check for latest commits and pull them
