@@ -4,11 +4,12 @@ on:
   push: 
     branches: [main] 
 #All the above is to tell which branch to listen for push
-jobs: 
-  runs-on: self-hosted
-  steps: 
-    - name: checkout-main
-      uses: actions/checkout@v4
-    - name: report
-      uses: echo "Hello from the other side"
+jobs:
+  step-jobs:
+    runs-on: self-hosted
+    steps: 
+      - name: checkout-main
+        uses: actions/checkout@v4
+      - name: report
+        run: echo "Hello from the other side"
 #checkout@v4 already check for latest commits and pull them
