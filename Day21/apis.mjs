@@ -9,8 +9,8 @@ export async function sum (request, response) {
   request.on('end', async () => {
     try {
       const data = JSON.parse(body);
-      const {num1, num2} = data;
-      if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+      const {number1, number2} = data;
+      if (typeof number1 !== 'number' || typeof number2 !== 'number') {
         const output = {error: "Invalid input"};
         response.writeHead(400, {'Content-Type': 'application/json'});
         response.end(JSON.stringify(output));
@@ -23,7 +23,7 @@ export async function sum (request, response) {
         await saveData(state);
         return;
       }
-      const output = {sum: num1 + num2};
+      const output = {sum: number1 + number2};
       state.sumCallCount++;
       response.writeHead(200, {'Content-Type': 'application/json'});
       response.end(JSON.stringify(output));
