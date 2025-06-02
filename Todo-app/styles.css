@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: fit-content;
+    background-color: white;
+}
+
+.main__title {
+
+}
+
+.main__action form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__action-text {
+    width: 500px;
+    height: 30px;
+    color: rgb(196, 196, 196);
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 3px;
+}
+
+.main__action-text::placeholder {
+    padding-left: 5px;
+}
