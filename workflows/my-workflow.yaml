@@ -5,7 +5,7 @@ on:
     branches: [main] 
 #All the above is to tell which branch to listen for push
 jobs:
-  step-jobs:
+  chessgame1:
     runs-on: self-hosted
     steps: 
       - name: checkout-main
